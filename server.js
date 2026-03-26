@@ -8,7 +8,7 @@ const DB_FILE = path.join(__dirname, 'wishes.json');
 // Initialize JSON DB
 if (!fs.existsSync(DB_FILE)) {
     const initialData = [
-        { name: "Budi Santoso", status: "Hadir", msg: "Selamat menempuh hidup baru Rizal & Liana. Semoga samawa!" },
+        { name: "Budi Santoso", status: "Hadir", msg: "Selamat menempuh hidup baru Zabiq & Liana. Semoga samawa!" },
         { name: "Siska", status: "Tidak Hadir", msg: "Maaf belum bisa hadir, doa terbaik untuk kalian berdua yaa." },
         { name: "Testing Agent", status: "Hadir", msg: "Ini tes otomatis masuk database" } // Preserved from previous test!
     ];
@@ -36,12 +36,12 @@ const server = http.createServer((req, res) => {
                     res.end(JSON.stringify({ error: 'Database error' }));
                     return;
                 }
-                
+
                 let wishes = [];
                 try {
                     wishes = JSON.parse(data);
-                } catch(e) {}
-                
+                } catch (e) { }
+
                 // Return reversed to show newest first!
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify([...wishes].reverse()));
@@ -60,16 +60,16 @@ const server = http.createServer((req, res) => {
                     fs.readFile(DB_FILE, 'utf8', (err, data) => {
                         let wishes = [];
                         if (!err) {
-                            try { wishes = JSON.parse(data); } catch(e) {}
+                            try { wishes = JSON.parse(data); } catch (e) { }
                         }
-                        
+
                         // Push new wish to array
                         wishes.push({
                             name: newWish.name || '',
                             status: newWish.status || '',
                             msg: newWish.msg || ''
                         });
-                        
+
                         fs.writeFile(DB_FILE, JSON.stringify(wishes, null, 2), (err) => {
                             if (err) {
                                 res.writeHead(500, { 'Content-Type': 'application/json' });
@@ -94,11 +94,11 @@ const server = http.createServer((req, res) => {
     if (filePath === '/') {
         filePath = '/index.html';
     }
-    
+
     // Safety check to prevent directory traversal
     filePath = filePath.replace(/\.\./g, '');
     const extname = String(path.extname(filePath)).toLowerCase();
-    
+
     const mimeTypes = {
         '.html': 'text/html',
         '.js': 'text/javascript',
