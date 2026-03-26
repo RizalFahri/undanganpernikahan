@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Pernikahan - Rizal & Liana</title>
+    <title>Undangan Pernikahan - Zabiq & Liana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary: #D4AF37; /* Gold */
-            --bg-color: #FAFAFA; /* Snow/White */
+            --primary: #D4AF37;
+            /* Gold */
+            --bg-color: #FAFAFA;
+            /* Snow/White */
             --cream: #FFFDD0;
             --soft-pink: #FDF2F4;
             --text-dark: #333333;
@@ -29,19 +34,32 @@
             font-family: var(--font-body);
             color: var(--text-dark);
             background-color: var(--bg-color);
-            overflow: hidden; /* Prevent scrolling initially */
+            overflow: hidden;
+            /* Prevent scrolling initially */
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3, h4, .wedding-font {
+        h1,
+        h2,
+        h3,
+        h4,
+        .wedding-font {
             font-family: var(--font-heading);
             font-weight: 600;
         }
 
-        .text-center { text-align: center; }
-        .text-primary { color: var(--primary); }
-        .bg-pink { background-color: var(--soft-pink); }
-        
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-pink {
+            background-color: var(--soft-pink);
+        }
+
         section {
             padding: 80px 20px;
             position: relative;
@@ -56,8 +74,11 @@
         /* Cover Section */
         #cover {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -90,15 +111,22 @@
         .cover-content h1 {
             font-size: 4rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .guest-wrapper {
             margin: 30px 0;
         }
 
-        .guest-wrapper p { margin-bottom: 5px; font-weight: 300; }
-        .guest-name { font-size: 1.5rem; font-weight: 600; }
+        .guest-wrapper p {
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+
+        .guest-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
 
         .btn {
             display: inline-block;
@@ -123,15 +151,22 @@
         /* Hero / Main Banner */
         #hero {
             height: 100vh;
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
 
-        #hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
-        #hero p { font-size: 1.2rem; color: var(--text-light); }
+        #hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
 
         /* Couple Section */
         .couple-wrapper {
@@ -142,7 +177,11 @@
         }
 
         @media(min-width: 768px) {
-            .couple-wrapper { flex-direction: row; justify-content: center; align-items: center; }
+            .couple-wrapper {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         .person {
@@ -156,29 +195,50 @@
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
-        .person h3 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
-        .person p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
+        .person h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
 
-        .and { font-size: 3rem; color: var(--primary); font-family: var(--font-heading); }
+        .person p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .and {
+            font-size: 3rem;
+            color: var(--primary);
+            font-family: var(--font-heading);
+        }
 
         /* Detail & Countdown Section */
         .event-card {
             background: white;
             padding: 40px 20px;
             border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
             margin-bottom: 40px;
             border-top: 5px solid var(--primary);
         }
 
-        .event-card h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--text-dark); }
-        .event-card p { margin-bottom: 10px; color: var(--text-light); }
-        
+        .event-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .event-card p {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
         .countdown {
             display: flex;
             justify-content: center;
@@ -195,11 +255,21 @@
             justify-content: center;
             align-items: center;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .cd-box span { font-size: 1.5rem; font-weight: 600; color: var(--primary); font-family: var(--font-heading);}
-        .cd-box small { font-size: 0.7rem; text-transform: uppercase; color: var(--text-light); }
+        .cd-box span {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            font-family: var(--font-heading);
+        }
+
+        .cd-box small {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
 
         .map-wrapper {
             width: 100%;
@@ -216,8 +286,12 @@
             gap: 10px;
             margin-top: 30px;
         }
+
         @media(min-width: 600px) {
-            .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
         }
 
         .gallery-item {
@@ -225,17 +299,23 @@
             overflow: hidden;
             border-radius: 10px;
             cursor: pointer;
-            padding-top: 100%; /* 1:1 Aspect Ratio */
+            padding-top: 100%;
+            /* 1:1 Aspect Ratio */
         }
-        
+
         .gallery-item img {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
 
         /* Story Timeline */
         .timeline {
@@ -248,7 +328,10 @@
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0; top: 0; height: 100%; width: 2px;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
             background: var(--primary);
         }
 
@@ -260,90 +343,244 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -36px; top: 0;
-            width: 14px; height: 14px;
+            left: -36px;
+            top: 0;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: white;
             border: 3px solid var(--primary);
         }
 
-        .timeline-date { color: var(--primary); font-weight: 600; margin-bottom: 5px; }
-        .timeline-content { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .timeline-date {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
 
         /* RSVP Form */
-        .rsvp-form { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 15px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 0.9rem;}
+        .rsvp-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
         .form-control {
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: var(--font-body);
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: var(--font-body);
             transition: border-color 0.3s;
         }
-        .form-control:focus { outline: none; border-color: var(--primary); }
-        select.form-control { appearance: none; }
-        
-        #wishes-list { margin-top: 30px; text-align: left; max-height: 400px; overflow-y: auto; padding-right: 10px;}
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        select.form-control {
+            appearance: none;
+        }
+
+        #wishes-list {
+            margin-top: 30px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
         .wish-card {
-            background: var(--bg-color); padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid var(--primary);
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary);
             animation: fadeIn 0.5s ease forwards;
         }
-        .wish-name { font-weight: 600; color: var(--text-dark); margin-bottom: 5px; display: flex; justify-content: space-between;}
-        .wish-label { font-size: 0.75rem; background: var(--soft-pink); color: var(--primary); padding: 2px 8px; border-radius: 10px;}
-        .wish-text { color: var(--text-light); font-size: 0.9rem; }
+
+        .wish-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wish-label {
+            font-size: 0.75rem;
+            background: var(--soft-pink);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .wish-text {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
 
         /* Footer */
-        footer { background: var(--text-dark); color: white; padding: 40px 20px; text-align: center; }
-        footer h2 { color: var(--primary); margin-bottom: 15px; }
-        footer p { font-size: 0.9rem; color: #aaa; margin-top: 20px; }
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 20px;
+        }
 
         /* Audio Control */
         .audio-btn {
             position: fixed;
-            bottom: 30px; right: 30px;
-            width: 50px; height: 50px;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
             background: var(--primary);
             border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            color: white; font-size: 20px;
-            cursor: pointer; z-index: 999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             border: none;
             animation: spin 4s linear infinite;
         }
-        .audio-btn.paused { animation: none; }
 
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        
+        .audio-btn.paused {
+            animation: none;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         /* Lightbox */
         #lightbox {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); z-index: 10000;
-            display: none; justify-content: center; align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
         }
-        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 5px; }
-        #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 5px;
+        }
+
+        #lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
 
         /* Scroll Animation Utility */
-        .fade-up { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Petals Canvas */
         #petals-canvas {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
-        
+
         .section-title {
-            font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
         }
-        .section-desc { margin-bottom: 30px; color: var(--text-light); }
+
+        .section-desc {
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
 
         /* Custom Scrollbar for wishes */
-        #wishes-list::-webkit-scrollbar { width: 6px; }
-        #wishes-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-        #wishes-list::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        #wishes-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #wishes-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        #wishes-list::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Falling Petals Canvas -->
@@ -359,7 +596,7 @@
     <section id="cover">
         <div class="cover-content">
             <h3>We're Getting Married</h3>
-            <h1>Rizal & Liana</h1>
+            <h1>Zabiq & Liana</h1>
             <div class="guest-wrapper">
                 <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
                 <div class="guest-name" id="guest-name">Tamu Undangan</div>
@@ -370,11 +607,11 @@
 
     <!-- Main Content -->
     <div id="main-content">
-        
+
         <!-- Hero Section -->
         <section id="hero">
             <div class="container fade-up">
-                <h2 class="wedding-font text-primary">Rizal & Liana</h2>
+                <h2 class="wedding-font text-primary">Zabiq & Liana</h2>
                 <p>25 Desember 2026</p>
                 <div class="countdown" id="hero-countdown">
                     <!-- Countdown populated by JS -->
@@ -386,25 +623,31 @@
         <section id="couple" class="bg-pink text-center">
             <div class="container fade-up">
                 <p style="font-style: italic; color: var(--text-light); margin-bottom: 30px;">
-                    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
+                    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu
+                    sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
+                    kasih dan sayang."
                 </p>
-                
+
                 <h2 class="section-title">Mempelai</h2>
                 <div class="couple-wrapper">
                     <div class="person">
-                        <img src="https://images.unsplash.com/photo-1549416878-b9ca95e26903?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rizal">
-                        <h3 class="wedding-font">Rizal Pratama</h3>
+                        <img src="https://images.unsplash.com/photo-1549416878-b9ca95e26903?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Zabiq">
+                        <h3 class="wedding-font">Zabiq Pratama</h3>
                         <p>Putra dari Bapak Fulan & Ibu Fulanah</p>
-                        <a href="#" style="color:var(--text-light); text-decoration:none; margin-top:10px; display:block;">@rizalpratama</a>
+                        <a href="#"
+                            style="color:var(--text-light); text-decoration:none; margin-top:10px; display:block;">@ZabiqPratama</a>
                     </div>
-                    
+
                     <div class="and">&</div>
 
                     <div class="person">
-                        <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Liana">
+                        <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Liana">
                         <h3 class="wedding-font">Liana Safitri</h3>
                         <p>Putri dari Bapak Budi & Ibu Siti</p>
-                        <a href="#" style="color:var(--text-light); text-decoration:none; margin-top:10px; display:block;">@lianasa</a>
+                        <a href="#"
+                            style="color:var(--text-light); text-decoration:none; margin-top:10px; display:block;">@lianasa</a>
                     </div>
                 </div>
             </div>
@@ -414,8 +657,9 @@
         <section id="event" class="text-center">
             <div class="container fade-up">
                 <h2 class="section-title">Waktu & Tempat</h2>
-                <p class="section-desc">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
-                
+                <p class="section-desc">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i
+                    untuk hadir pada acara pernikahan kami.</p>
+
                 <div class="event-card">
                     <h3 class="wedding-font">Akad Nikah</h3>
                     <p><strong>Minggu, 25 Desember 2026</strong></p>
@@ -432,12 +676,16 @@
                     <br>
                     <p><strong>Hotel Mulia Senayan (Grand Ballroom)</strong></p>
                     <p>Jl. Asia Afrika Senayan, Jakarta Pusat</p>
-                    
+
                     <div class="map-wrapper">
                         <!-- Embed Google Maps -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.305481716335!2d106.79727781534446!3d-6.216773395499252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14fe9f2ec63%3A0xff050b1ab8f8892f!2sHotel%20Mulia%20Senayan%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1698244109765!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.305481716335!2d106.79727781534446!3d-6.216773395499252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14fe9f2ec63%3A0xff050b1ab8f8892f!2sHotel%20Mulia%20Senayan%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1698244109765!5m2!1sen!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <a href="https://goo.gl/maps/example" target="_blank" class="btn" style="margin-top:20px;">Buka di Google Maps</a>
+                    <a href="https://goo.gl/maps/example" target="_blank" class="btn" style="margin-top:20px;">Buka di
+                        Google Maps</a>
                 </div>
             </div>
         </section>
@@ -447,14 +695,26 @@
             <div class="container fade-up">
                 <h2 class="section-title">Galeri Kebahagiaan</h2>
                 <p class="section-desc">Momen indah yang menjadi saksi perjalanan cinta kami.</p>
-                
+
                 <div class="gallery-grid">
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 1"></div>
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 2"></div>
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 3"></div>
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 4"></div>
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 5"></div>
-                    <div class="gallery-item" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galeri 6"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 1"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 2"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 3"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 4"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 5"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img
+                            src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Galeri 6"></div>
                 </div>
             </div>
         </section>
@@ -468,21 +728,24 @@
                         <div class="timeline-date">Agustus 2020</div>
                         <div class="timeline-content">
                             <h4>Pertama Kali Bertemu</h4>
-                            <p class="wish-text">Kami bertemu di sebuah acara kampus, berawal dari sapaan singkat yang akhirnya membawa kami pada obrolan panjang.</p>
+                            <p class="wish-text">Kami bertemu di sebuah acara kampus, berawal dari sapaan singkat yang
+                                akhirnya membawa kami pada obrolan panjang.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Februari 2022</div>
                         <div class="timeline-content">
                             <h4>Menjalin Kasih</h4>
-                            <p class="wish-text">Setelah lama saling mengenal, kami memutuskan untuk melangkah bersama dalam sebuah komitmen.</p>
+                            <p class="wish-text">Setelah lama saling mengenal, kami memutuskan untuk melangkah bersama
+                                dalam sebuah komitmen.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">Juni 2026</div>
                         <div class="timeline-content">
                             <h4>Lamaran</h4>
-                            <p class="wish-text">Hari dimana dua keluarga besar bertemu, mengikat janji untuk melangkah ke jenjang yang diridhoi Allah.</p>
+                            <p class="wish-text">Hari dimana dua keluarga besar bertemu, mengikat janji untuk melangkah
+                                ke jenjang yang diridhoi Allah.</p>
                         </div>
                     </div>
                 </div>
@@ -499,7 +762,8 @@
                     <form id="form-rsvp" onsubmit="submitRsvp(event)">
                         <div class="form-group">
                             <label>Nama Anda</label>
-                            <input type="text" id="rsvp-name" class="form-control" required placeholder="Tuliskan nama Anda">
+                            <input type="text" id="rsvp-name" class="form-control" required
+                                placeholder="Tuliskan nama Anda">
                         </div>
                         <div class="form-group">
                             <label>Konfirmasi Kehadiran</label>
@@ -511,7 +775,8 @@
                         </div>
                         <div class="form-group">
                             <label>Pesan & Doa</label>
-                            <textarea id="rsvp-message" class="form-control" rows="4" required placeholder="Tuliskan doa dan ucapan"></textarea>
+                            <textarea id="rsvp-message" class="form-control" rows="4" required
+                                placeholder="Tuliskan doa dan ucapan"></textarea>
                         </div>
                         <button type="submit" class="btn" style="width:100%">Kirim Ucapan</button>
                     </form>
@@ -525,9 +790,10 @@
 
         <!-- Footer -->
         <footer>
-            <h2 class="wedding-font text-primary">Rizal & Liana</h2>
-            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.</p>
-            <p style="margin-top: 40px;">Made with ❤️ by Antigravity</p>
+            <h2 class="wedding-font text-primary">Zabiq & Liana</h2>
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk
+                memberikan doa restu kepada kami.</p>
+            <p style="margin-top: 40px;">Made with ❤️</p>
         </footer>
 
     </div>
@@ -544,7 +810,7 @@
             // Get guest name from URL ?to=Name
             const urlParams = new URLSearchParams(window.location.search);
             const guestName = urlParams.get('to');
-            if(guestName) {
+            if (guestName) {
                 document.getElementById('guest-name').innerText = guestName;
                 document.getElementById('rsvp-name').value = guestName;
             }
@@ -562,9 +828,9 @@
 
             // Start falling petals (bonus)
             initPetals();
-            
-            // Generate dummy wishes
-            renderDummyWishes();
+
+            // Load wishes from database
+            loadWishes();
         });
 
         /* --- Cover & Audio Setup --- */
@@ -599,7 +865,7 @@
             document.body.style.overflow = 'auto';
             // Show Audio button
             audioBtn.style.display = 'flex';
-            
+
             // Start Audio
             if (player && typeof player.playVideo === 'function') {
                 player.playVideo();
@@ -615,7 +881,7 @@
 
         function toggleAudio() {
             if (!player || typeof player.playVideo !== 'function') return;
-            
+
             if (isPlaying) {
                 player.pauseVideo();
                 audioBtn.classList.add('paused');
@@ -632,7 +898,7 @@
 
         function startCountdown() {
             const countdownEl = document.getElementById('hero-countdown');
-            
+
             setInterval(() => {
                 const now = new Date().getTime();
                 const distance = targetDate - now;
@@ -644,13 +910,13 @@
 
                 if (distance < 0) {
                     countdownEl.innerHTML = "<div class='cd-box'><span>0</span><small>Hari</small></div>" +
-                                            "<div class='cd-box'><span>0</span><small>Jam</small></div>" +
-                                            "<div class='cd-box'><span>0</span><small>Menit</small></div>" +
-                                            "<div class='cd-box'><span>0</span><small>Detik</small></div>";
+                        "<div class='cd-box'><span>0</span><small>Jam</small></div>" +
+                        "<div class='cd-box'><span>0</span><small>Menit</small></div>" +
+                        "<div class='cd-box'><span>0</span><small>Detik</small></div>";
                     return;
                 }
 
-                countdownEl.innerHTML = 
+                countdownEl.innerHTML =
                     `<div class='cd-box'><span>${days}</span><small>Hari</small></div>
                      <div class='cd-box'><span>${hours}</span><small>Jam</small></div>
                      <div class='cd-box'><span>${minutes}</span><small>Menit</small></div>
@@ -675,49 +941,63 @@
         }
 
         /* --- RSVP Logic --- */
-        function submitRsvp(event) {
+        async function submitRsvp(event) {
             event.preventDefault();
             const name = document.getElementById('rsvp-name').value;
             const status = document.getElementById('rsvp-status').value;
             const msg = document.getElementById('rsvp-message').value;
 
-            if(!name || !status || !msg) return;
+            if (!name || !status || !msg) return;
 
-            const list = document.getElementById('wishes-list');
-            
-            const wishHtml = `
-                <div class="wish-card">
-                    <div class="wish-name">${name} <span class="wish-label">${status}</span></div>
-                    <div class="wish-text">"${msg}"</div>
-                </div>
-            `;
-            
-            // Insert at the top
-            list.insertAdjacentHTML('afterbegin', wishHtml);
-            
-            // Reset form
-            document.getElementById('form-rsvp').reset();
-            
-            // Optional alert
-            alert('Terima kasih atas ucapan dan doanya!');
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Mengirim...';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch('/api/wishes', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, status, msg })
+                });
+
+                if (response.ok) {
+                    document.getElementById('form-rsvp').reset();
+                    await loadWishes();
+                    alert('Terima kasih atas ucapan dan doanya!');
+                } else {
+                    alert('Gagal mengirim ucapan, coba lagi nanti.');
+                }
+            } catch (error) {
+                console.error('Error submitting form', error);
+                alert('Terjadi kesalahan jaringan.');
+            } finally {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }
         }
 
-        function renderDummyWishes() {
-            const dummyData = [
-                {name: "Budi Santoso", status: "Hadir", msg: "Selamat menempuh hidup baru Rizal & Liana. Semoga samawa!"},
-                {name: "Siska", status: "Tidak Hadir", msg: "Maaf belum bisa hadir, doa terbaik untuk kalian berdua yaa."},
-            ];
-            
-            const list = document.getElementById('wishes-list');
-            dummyData.forEach(d => {
-                const wishHtml = `
-                    <div class="wish-card">
-                        <div class="wish-name">${d.name} <span class="wish-label">${d.status}</span></div>
-                        <div class="wish-text">"${d.msg}"</div>
-                    </div>
-                `;
-                list.insertAdjacentHTML('beforeend', wishHtml);
-            });
+        async function loadWishes() {
+            try {
+                const response = await fetch('/api/wishes');
+                if (!response.ok) throw new Error("Gagal mengambil data");
+                const wishes = await response.json();
+
+                const list = document.getElementById('wishes-list');
+                list.innerHTML = '';
+
+                wishes.forEach(d => {
+                    const wishHtml = `
+                        <div class="wish-card">
+                            <div class="wish-name">${d.name} <span class="wish-label">${d.status}</span></div>
+                            <div class="wish-text">"${d.msg}"</div>
+                        </div>
+                    `;
+                    list.insertAdjacentHTML('beforeend', wishHtml);
+                });
+            } catch (error) {
+                console.error("Gagal load ucapan:", error);
+            }
         }
 
         /* --- Falling Petals Animation (Simple Canvas) --- */
@@ -731,7 +1011,7 @@
                 w = canvas.width = window.innerWidth;
                 h = canvas.height = window.innerHeight;
             }
-            
+
             window.addEventListener('resize', resize);
             resize();
 
@@ -769,7 +1049,7 @@
                 }
             }
 
-            for(let i=0; i<30; i++) {
+            for (let i = 0; i < 30; i++) {
                 petalsArray.push(new Petal());
             }
 
@@ -781,9 +1061,10 @@
                 });
                 requestAnimationFrame(animate);
             }
-            
+
             animate();
         }
     </script>
 </body>
+
 </html>
